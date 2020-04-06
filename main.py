@@ -3,18 +3,23 @@ from pathlib import Path
 
 timesheet_path = Path('/home/adrian__/Python/Time_Tracker/timesheets')
 
-print("""
- ----------------------------------
-      Welcome to Time Tracker
- ----------------------------------
-""")
+def main():
+  header()
+  start_tracker()
 
+def header():
+  print("""
+                ----------------------------------
+                      Welcome to Time Tracker
+                ----------------------------------
+  """)
+
+#TODO: option 4 read Timesheets
 def start_tracker():
   while True:
     print("""
-     Press [1] Start Time Tracking
-     Press [2] Stop Time Tracking
-     Press [3] Display Timesheets
+     Press [1] Start Time Tracking    Press [3] Display Timesheets
+     Press [2] Stop Time Tracking     Press [4] Read Timesheets
      Press [Q] Quit Application 
     """)
 
@@ -45,5 +50,9 @@ def start_tracker():
       print('!!Closing Application...')
       exit()
 
-start_tracker()
 
+if __name__ == "__main__":
+    main()
+
+#TODO: create an exe for the script
+#https://stackoverflow.com/questions/30149763/how-to-create-a-linux-executable-file-using-python-code
